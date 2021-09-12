@@ -1,5 +1,5 @@
-![Shield](https://img.shields.io/badge/Tarea%203-La%20tarea%20esta%20terminada-blue)
-<a name="top"></a>
+<a name="top"></a> <br>
+![Shield](https://img.shields.io/badge/Tarea%203-La%20tarea%20esta%20terminada-blue) <br> <br>
 ![This is an image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1280px-Firma_TEC.svg.png)
 ## Tarea #3: Estandar de nombres || Base de Datos					
 #### Estudiante: Bryan Pérez Rojas 
@@ -12,8 +12,7 @@ utilizar un mismo método al crear las tablas, llaves primarias y distintos atri
 Más adelante se encontrará un índice donde se podrá observar las distintas áreas a cubrir, al hacer clic sobre
 cualquiera de los títulos en el índice, se dirigirá inmediatamente al apartado seleccionado. 
 
-***¿Alguna vez se han preguntado si existe una forma correcta de escribir SQL?***
-
+***¿Alguna vez se han preguntado si existe una forma correcta de escribir SQL?***<br>
 La respuesta es que sí y no, todos tenemos una forma distinta de hacer las cosas, pero se podría decir que hay
 de alguna manera un camino en que podamos estandarizar el cómo hacemos esto.
 
@@ -27,31 +26,57 @@ inclusive para el momento en que se está llevando a cabo sería tener un están
 ya que si no se encuentra ninguna guía, podríamos llegar a crear algo que unos entenderán una parte y otros solo 
 otra parte, lo que se desearía es que todos podamos entender lo que se ha hecho y para futuras personas que entren 
 a la empresa que puedan entender sin ningún problema y llegar a agregar nuevas funciones con este mismo estándar ya
-establecido. 
-
+establecido. <br>
 El estándar que se utilizará en el siguiente documento es obtenido de [SQL Style Guide](https://www.sqlstyle.guide/), desarrollado por [Simon Holywell](https://www.simonholywell.com/).
+
+Mi idioma preferido personalmente para hacer este desarrollo es el inglés, ya que esto nos permite crear un estándar 
+más entendible y amplio para más personas, ya sea que estemos trabajando con personas de un mismo país o inclusive 
+con un equipo de personas de distintos países. <br>
+Aunque el inglés no sea 100% necesario para llegar a ser un desarrollador, gran parte de la buena documentación se 
+encuentra en inglés y esto nos obliga de alguna manera a poder entenderlo para llegar a evacuar dudas o comprender
+algunos procesos. 
 
 
 ## Índice de Contenidos
 
 - [General](#1)  
     - [Que se debe hacer](#11)
-    - [Que se debe evitar](#12)
-- [Character Sets, Collations, Unicode](#2)
+    - [Que ***no*** se debe hacer](#12)
+- [Reglas para el uso de nombres](#2)
+    - [General](#21)
+    - [Tablas](#22)
+    - [Columnas](#23)
 - [Data Types](#3)
 - [Bibliografía](#4)
 
 
 ###  General <a name="1"></a>
 
-Esta es una prueba para el indice de contenidos
+En este apartado veremos un par de reglas generales de lo que se debería y ***no*** se debería hacer cuando estamos
+creando una base de datos 
 
 ### Que se debe hacer <a name="11"></a>
-A continuacion veremos los puntos, tal vez como reglas que deberiamos seguir al desarrollar la base de datos
+- Utilizar identificadores y nombres consistentes y descriptivos. 
+- Debemos utilizar espacios en blanco y de identación correctamente de manera que el código pueda leerse de manera más legible. 
+- Usar el estándar ISO 8601 para datos de horas y fechas (YYYY-MM-DD HH:MM:SS.SSSSS).
+- Intentar utilizar solamente funciones SQL por razones de portabilidad.
+- Matener el código fuera de la redundancia, como por ejemplo el uso innecesario de paréntesis o `WHERE`.
+- Incluir comentarios en el código SQL donde sea necesario. Utilizar el estilo C de /* para abrir y */ para cerrar donde sea posible,
+también podríamos utilizar -- para hacer comentarios y al final del comentario crear una nueva linea. 
 
-### Que se debe evitar <a name="12"></a>
-En este apartado veremos lo que deberiamos evitar hacer al crear la base de datos, estos puntos a continuacion
-se van a tomar como malas practicas en el desarrollo de base de datos. 
+### Que ***no*** se debe hacer <a name="12"></a>
+- Evitemos utilizar CamelCase, su lectura es complicada. 
+- Uso de la notación húngara, como tbl o sp_.
+- El uso de plurales, como es el caso del uso de "staff" en vez de "employees".
+- No se deben usar los principios de diseño de programación orientada a objetos en SQL o estructuras de bases de datos.
+
+## Reglas para el uso de nombres <a name="2"></a>
+
+## General <a name="21"></a>
+
+## Tablas <a name="22"></a>
+
+## Columnas <a name="23"></a>
 
 ### Bibliografía <a name = "4"></a>
 * https://dev.mysql.com/doc/refman/8.0/en
