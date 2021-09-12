@@ -29,18 +29,29 @@ otra parte, lo que se desearía es que todos podamos entender lo que se ha hecho
 a la empresa que puedan entender sin ningún problema y llegar a agregar nuevas funciones con este mismo estándar ya
 establecido. 
 
+El estándar que se utilizará en el siguiente documento es obtenido de [SQL Style Guide](https://www.sqlstyle.guide/), desarrollado por [Simon Holywell](https://www.simonholywell.com/).
+
 
 ## Índice de Contenidos
 
-- [Language Structure](#1)  
+- [General](#1)  
+    - [Que se debe hacer](#11)
+    - [Que se debe evitar](#12)
 - [Character Sets, Collations, Unicode](#2)
 - [Data Types](#3)
 - [Bibliografía](#4)
 
 
-###  Language Structure <a name="1"></a>
+###  General <a name="1"></a>
 
 Esta es una prueba para el indice de contenidos
+
+### Que se debe hacer <a name="11"></a>
+A continuacion veremos los puntos, tal vez como reglas que deberiamos seguir al desarrollar la base de datos
+
+### Que se debe evitar <a name="12"></a>
+En este apartado veremos lo que deberiamos evitar hacer al crear la base de datos, estos puntos a continuacion
+se van a tomar como malas practicas en el desarrollo de base de datos. 
 
 ### Bibliografía <a name = "4"></a>
 * https://dev.mysql.com/doc/refman/8.0/en
