@@ -46,11 +46,19 @@ algunos procesos.
     - [General](#21)
     - [Tablas](#22)
     - [Columnas](#23)
+    - [Stored Procedures](#24)
 - [Data Types](#3)
-- [Bibliografía](#4)
+    - [Caracteres](#31)
+    - [Numérico](#32)
+    - [Otros tipos de datos](#33)
+- [Primary Key and Foreign Key](#4)
+    - [Primary Key](#41)
+    - [Foreign Key](#42)
+- [Palabras reservadas](#5)
+- [Bibliografía](#6)
 
 
-###  General <a name="1"></a>
+##  General <a name="1"></a>
 
 En este apartado veremos un par de reglas generales de lo que se debería y ***no*** se debería hacer cuando estamos
 creando una base de datos 
@@ -72,15 +80,79 @@ también podríamos utilizar -- para hacer comentarios y al final del comentario
 
 ## Reglas para el uso de nombres <a name="2"></a>
 
-## General <a name="21"></a>
+### General <a name="21"></a>
+- Tomar en cuenta que el nombre es único y que no es una palabra reservada.
+- No sobrepasar los 30 caracteres. 
+- Los nombres deben iniciar con una letra y **no** deben terminar con un guion bajo [ _ ].
+- Solamente debemos utilizar letras, números y guiones bajos.
+- El uso de los guiones bajos es cuando normalmente tendríamos un espacio en blanco entre palabras.
+- Evitar abreviaciones y si se utilizan, tener en cuenta que sean abreviaciones que normalmente se entiendan.
 
-## Tablas <a name="22"></a>
+### Tablas <a name="22"></a>
+Las tablas son objetos de base de datos que contienen todos sus datos. En las tablas, los datos se organizan con arreglo a un formato de filas y columnas.
 
-## Columnas <a name="23"></a>
+- No utilizar un prefijo tal como tbl o alguna abreviación o algún otro tipo de notación húngara.
+- No debemos nombrar una tabla con el mismo nombre de una de sus columnas o vice versa. 
 
-### Bibliografía <a name = "4"></a>
+### Columnas <a name="23"></a>
+Una columna, campo o atributo es cada uno de los valores únicos (datos) que proporcionan la estructura según la cual se descomponen las filas (registros o tuplas) de una tabla.
+
+- Utilizar nombres singulares.
+- Siempre que sea posible, utilizar `id` como el identificar primario de la tabla.
+- No agregar columnas con el mismo nombre que sus tablas.
+- Intentar utilizar siempre letras minúsculas.
+
+### Stored Procedures <a name="24"></a>
+- El nombre debe contener un verbo.
+- No utilizar prefijos como `sp_` o ningún tipo de notación húngara.
+
+
+## Tipos de datos para las columnas <a name = "3"></a>
+
+### Caracteres <a name = "31"></a>
+- char: Pueden ir de 0 a 255. 
+Ejemplo: En la tarea anterior creamos un char de 1, `estado char (1)`
+- varchar: Puede ir de 0 a 65,535.
+Ejemplo: De igual forma en la tarea usamos varchar, `nombre varchar (30)`. <br>
+Este podríamos variarlo depende para lo que lo usemos, en el caso de mi nombre con un varchar de 30 sería
+suficiente pero para estar seguros de que tendremos espacio suficiente podemos usar un varchar 50.
+
+### Numérico <a name = "32"></a>
+- smallint: Puede llegar a tener un valor en espacio hasta de 32767. El espacio es de 2 bytes por valor.
+Ejemplo: `edad smallint`
+- int: Pueder llegar a tener un valore en espacio hasta de 2147483647. El espacio es de 4 bytes por valor.
+Ejemplo: `codigo_empleado int`
+
+### Otros tipos de datos <a name = "33"></a>
+En el siguiente link podemos ver los datos anteriores y otros más que se pueden llegar a utilizar
+conforme los vamos necesitando: https://www.sqlstyle.guide/#column-data-types
+
+## Primary and Foreign Keys <a name = "4"></a>
+
+### Primary Key <a name = "41"></a>
+Un primary key es esencial para cada tabla en una base de datos. Está diseñado para identificar de forma única cada registro de la tabla.
+Ejemplo: `empresa_id int primary key auto_increment`. 
+- Debe contener un valor único para cada fila de datos.
+- No puede contener valores nulos.
+- Cada fila debe contener un valor en el primary key.
+
+### Foreign Key <a name = "42"></a>
+Un foreign key es una columna o grupo de columnas en una tabla de base de datos relacional que proporciona un vínculo entre los datos de dos tablas.
+El foreign key, es un primary key de otra tabla.
+Ejemplo: `CONSTRAINT FK_Carnet_Estudiante FOREIGN KEY (carnet_estudiante) REFERENCES Estudiante (carnet)`
+
+
+## Palabras reservadas <a name = "5"></a>
+En el siguiente link podemos encontrar la lista de palabras reservadas para ANSI SQL (92, 99 and 2003), MySQL 3 to 5.x, PostgreSQL 8.1, MS SQL Server 2000, MS ODBC y Oracle 10.2<br> 
+  ***Palabras reservadas:*** https://www.sqlstyle.guide/#appendix
+
+### Bibliografía <a name = "6"></a>
 * https://dev.mysql.com/doc/refman/8.0/en
 * https://www.sqlstyle.guide/
+* https://docs.microsoft.com/es-es/sql/relational-databases/tables/tables?view=sql-server-ver15#:~:text=Las%20tablas%20son%20objetos%20de,un%20campo%20dentro%20del%20registro
+* https://es.wikipedia.org/wiki/Columna_(base_de_datos)
+* https://www.techopedia.com/definition/5547/primary-key
+* https://www.techopedia.com/definition/7272/foreign-key
 
 
 [Ir al inicio](#top)
