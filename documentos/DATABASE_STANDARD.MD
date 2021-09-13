@@ -137,8 +137,7 @@ Ejemplo: `empresa_id int primary key auto_increment`.
 - Cada fila debe contener un valor en el primary key.
 
 ### Foreign Key <a name = "42"></a>
-Un foreign key es una columna o grupo de columnas en una tabla de base de datos relacional que proporciona un vínculo entre los datos de dos tablas.
-El foreign key, es un primary key de otra tabla.
+Un foreign key es una columna o grupo de columnas en una tabla de base de datos relacional que proporciona un vínculo entre los datos de dos tablas. Trabaja como una conexión cruzada entre tablas porque hace referencia al primary key de otra table, de esta manera establece una conexión entre ellas. <br>
 Ejemplo: `CONSTRAINT FK_Carnet_Estudiante FOREIGN KEY (carnet_estudiante) REFERENCES Estudiante (carnet)`
 
 
@@ -155,4 +154,4 @@ En el siguiente link podemos encontrar la lista de palabras reservadas para ANSI
 * https://www.techopedia.com/definition/7272/foreign-key
 
 
-[Ir al inicio](#top)
+[Ir al principio](#top)
